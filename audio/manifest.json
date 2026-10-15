@@ -1,0 +1,150 @@
+{
+  "generated": "2026-10-15T02:42:18.485Z",
+  "engine": "macOS say → AAC/M4A",
+  "synthetic": true,
+  "records": [
+    {
+      "id": "thu-everyday",
+      "file": "thu-everyday.m4a",
+      "text": "Could you show me how to use this machine?",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 2.056735,
+      "bytes": 22255,
+      "sha256": "d5fd3ad802b46bf69d71b61a7a9195a84db8ba8720c7b5cf9b68301de7eeda27"
+    },
+    {
+      "id": "thu-research",
+      "file": "thu-research.m4a",
+      "text": "The main idea is to expand the sample before imaging it.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.387347,
+      "bytes": 33911,
+      "sha256": "109af45e44586202c9d1a299addbba238c91d982a56ace55c621cb2a66d82e94"
+    },
+    {
+      "id": "fri-everyday",
+      "file": "fri-everyday.m4a",
+      "text": "I'd rather go somewhere quiet so we can have a proper chat.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.42195,
+      "bytes": 34259,
+      "sha256": "6dade49dbaf2bec9e0a8cd1c30604a0d0657e330b7b655f5c251ded4e7629a0d"
+    },
+    {
+      "id": "fri-research",
+      "file": "fri-research.m4a",
+      "text": "This allows us to see details that are normally too close together.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.734966,
+      "bytes": 36469,
+      "sha256": "5ff0ab629412d1741a3c57dab06a0c81ef9438416b0dee7e0030eaa2477482b1"
+    },
+    {
+      "id": "weekend-full",
+      "file": "weekend-full.m4a",
+      "text": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart. This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 42.142902,
+      "bytes": 353400,
+      "sha256": "759b83412a1ff767e3f16764f77768487dcc766cbb9122645b97a1dc8e8edae5"
+    },
+    {
+      "id": "weekend-1",
+      "file": "weekend-1.m4a",
+      "text": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 20.873424,
+      "bytes": 174467,
+      "sha256": "ddb19ee865c4a022b68a126fdd6fa9591bf723d9e91781763b1c5b353e1f4440"
+    },
+    {
+      "id": "weekend-2",
+      "file": "weekend-2.m4a",
+      "text": "This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 21.068662,
+      "bytes": 177638,
+      "sha256": "3355121d7fb43544eb4a455fa63ddb8c566ba45f09867fa9c2859ce853880736"
+    },
+    {
+      "id": "mon-everyday",
+      "file": "mon-everyday.m4a",
+      "text": "Let me check my schedule and get back to you.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 2.390113,
+      "bytes": 25654,
+      "sha256": "bb5db0adf79183e37c68c4c824c492d2cefbcc624e5b4f5f81ca1dab35f238fd"
+    },
+    {
+      "id": "mon-research",
+      "file": "mon-research.m4a",
+      "text": "I'm trying to understand why these samples look so different.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.597596,
+      "bytes": 35669,
+      "sha256": "830e4f8b1f49e1f63bd87090c58c6418e458a03125f93fc885f904c29733c3d1"
+    },
+    {
+      "id": "tue-everyday",
+      "file": "tue-everyday.m4a",
+      "text": "It took longer than I expected, so I got back late.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.412063,
+      "bytes": 33356,
+      "sha256": "4044a04f772e86c34d259c42b38d33af7ca31194beed256403378cfaa200ae75"
+    },
+    {
+      "id": "tue-research",
+      "file": "tue-research.m4a",
+      "text": "I changed one step, but the result was still the same.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.348889,
+      "bytes": 32364,
+      "sha256": "e2eb6700940f7f6ec40f3602ba2c61b84faa033ca1c0a954b051a43f43e07f78"
+    },
+    {
+      "id": "wed-everyday",
+      "file": "wed-everyday.m4a",
+      "text": "I'm not sure yet, but I'll let you know tomorrow.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 2.736054,
+      "bytes": 26523,
+      "sha256": "213185c62c8516dc61c14a4d67814172b2f1d0d5c99e328446d557f0421f43fe"
+    },
+    {
+      "id": "wed-research",
+      "file": "wed-research.m4a",
+      "text": "We need to check whether the difference is due to sample preparation.",
+      "voice": "Ava (Enhanced)",
+      "language": "en-US",
+      "rate": 175,
+      "seconds": 3.550023,
+      "bytes": 34868,
+      "sha256": "4e55f10562ad31806c913f73f83f319f94a2467697cded4dc50f4ca0f8acbbc5"
+    }
+  ]
+}
