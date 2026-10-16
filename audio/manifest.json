@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T02:42:18.485Z",
+  "generated": "2026-10-16T11:09:05.651Z",
   "engine": "macOS say → AAC/M4A",
   "synthetic": true,
   "records": [
@@ -48,37 +48,37 @@
       "sha256": "5ff0ab629412d1741a3c57dab06a0c81ef9438416b0dee7e0030eaa2477482b1"
     },
     {
-      "id": "weekend-full",
-      "file": "weekend-full.m4a",
-      "text": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart. This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
+      "id": "hihomo-full",
+      "file": "hihomo-full.m4a",
+      "text": "This paper asks a simple question: can we make a sample much larger without changing its shape? Expansion microscopy helps us see small structures by physically expanding a sample. However, a large expansion factor alone does not tell us whether the expansion is uniform. The researchers developed a method called high-fold homogeneous expansion microscopy. They reported about eight- to nine-fold expansion in a single round and tested structural preservation in centrioles and nuclear pore complexes. The method also supports labeling after expansion. The main point is to check both how much a sample expands and how well its structure is preserved.",
       "voice": "Ava (Enhanced)",
       "language": "en-US",
       "rate": 175,
-      "seconds": 42.142902,
-      "bytes": 353400,
-      "sha256": "759b83412a1ff767e3f16764f77768487dcc766cbb9122645b97a1dc8e8edae5"
+      "seconds": 40.833288,
+      "bytes": 341807,
+      "sha256": "3685fb0cbfd5a696045b32075450e8959fafbff7975f40b910655d330afc41fb"
     },
     {
-      "id": "weekend-1",
-      "file": "weekend-1.m4a",
-      "text": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart.",
+      "id": "hihomo-1",
+      "file": "hihomo-1.m4a",
+      "text": "This paper asks a simple question: can we make a sample much larger without changing its shape? Expansion microscopy helps us see small structures by physically expanding a sample. However, a large expansion factor alone does not tell us whether the expansion is uniform.",
       "voice": "Ava (Enhanced)",
       "language": "en-US",
       "rate": 175,
-      "seconds": 20.873424,
-      "bytes": 174467,
-      "sha256": "ddb19ee865c4a022b68a126fdd6fa9591bf723d9e91781763b1c5b353e1f4440"
+      "seconds": 17.160544,
+      "bytes": 144557,
+      "sha256": "bfc0b44bc22371482395bde2e690b46ab8d36d2b4ebba0033cd9e71416c78435"
     },
     {
-      "id": "weekend-2",
-      "file": "weekend-2.m4a",
-      "text": "This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
+      "id": "hihomo-2",
+      "file": "hihomo-2.m4a",
+      "text": "The researchers developed a method called high-fold homogeneous expansion microscopy. They reported about eight- to nine-fold expansion in a single round and tested structural preservation in centrioles and nuclear pore complexes. The method also supports labeling after expansion. The main point is to check both how much a sample expands and how well its structure is preserved.",
       "voice": "Ava (Enhanced)",
       "language": "en-US",
       "rate": 175,
-      "seconds": 21.068662,
-      "bytes": 177638,
-      "sha256": "3355121d7fb43544eb4a455fa63ddb8c566ba45f09867fa9c2859ce853880736"
+      "seconds": 23.473424,
+      "bytes": 197619,
+      "sha256": "e3fab09177598ee9b3c4eec1e3cc6cd1cf99ee5b1345b37f71916145a489c494"
     },
     {
       "id": "mon-everyday",

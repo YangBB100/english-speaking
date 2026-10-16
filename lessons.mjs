@@ -1,6 +1,6 @@
 // Single working source for practice text, explanations, dates and generated audio.
 export const course = {
-  "id": "english-memorise-2026-10-15",
+  "id": "english-chinese-first-2026-10-16",
   "title": "Two sentences",
   "week": "2026.10.15 — 10.18",
   "voice": "Ava (Enhanced)",
@@ -11,7 +11,7 @@ export const course = {
     {
       "week": "第1轮",
       "title": "交代情况、说明问题、提出下一步",
-      "weekend": "ExM原理的口头介绍"
+      "weekend": "当周精读论文的背景与主旨（本周hiHomoExM）"
     },
     {
       "week": "第2轮",
@@ -36,7 +36,7 @@ export const course = {
       "label": "周四",
       "dateLabel": "10.15",
       "title": "请教怎么做，说明核心思路",
-      "subtitle": "今天两句：一句日常，一句科研。读懂、读顺，再遮住英文背。",
+      "subtitle": "今天两句：一句日常，一句科研。看中文先自己说，再点开英文参考。",
       "reviewIds": [],
       "items": [
         {
@@ -61,7 +61,7 @@ export const course = {
           "category": "科研交流",
           "en": "The main idea is to expand the sample before imaging it.",
           "zh": "核心思路是在成像前将样本膨胀。",
-          "scene": "简要介绍ExM的思路；这句话也会出现在周末段落里。",
+          "scene": "简要介绍ExM的核心思路。",
           "focus": [
             "The main idea is to"
           ],
@@ -79,7 +79,7 @@ export const course = {
       "label": "周五",
       "dateLabel": "10.16",
       "title": "说出偏好，解释能做到什么",
-      "subtitle": "先回背上次最多两句，再学今天两句；忙时只背一句。",
+      "subtitle": "看中文，先试着用英文说；再点开参考。今天仍只练两句，忙时一句。",
       "reviewIds": [
         "thu-everyday",
         "thu-research"
@@ -113,7 +113,7 @@ export const course = {
           ],
           "chunk": "This allows us to …",
           "chunkZh": "这样我们就能……。",
-          "explanation": "allow someone to do something：使某人能够做某事。本句也会出现在周末段落里。",
+          "explanation": "allow someone to do something：使某人能够做某事。",
           "replacements": [],
           "audio": "fri-research.m4a"
         }
@@ -122,48 +122,51 @@ export const course = {
     {
       "id": "weekend",
       "date": "2026-10-17",
+      "endDate": "2026-10-18",
       "label": "周末",
       "dateLabel": "10.17–18",
-      "title": "两天，共同背这一段",
-      "subtitle": "周六前半段；周日后半段，再接成整段。周末不额外增加每日两句。",
+      "title": "hiHomo：放大多少，也要看结构是否保留",
+      "subtitle": "本周精读论文的背景与主旨。周六前半，周日后半；看中文回背，英文按需展开。",
       "reviewIds": [],
       "items": [],
       "paragraph": {
-        "id": "weekend-full",
-        "title": "Expansion microscopy",
-        "en": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart. This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
-        "zh": "这篇论文介绍了一种叫作膨胀显微术的方法。核心思路是在成像前将样本膨胀。研究者在固定样本内部建立聚合物网络，并将特制的荧光标记锚定到网络上。消化后，凝胶吸水膨胀，将这些标记拉得更远。这样就能看清那些通常因距离太近而难以分辨的细节。研究者在培养细胞和小鼠脑组织中展示了该方法。在他们的成像条件下，报道的有效横向分辨率约为70纳米。关键在于：他们通过膨胀样本来提高有效分辨率，而不是升级显微镜本身。",
-        "audio": "weekend-full.m4a",
-        "note": "依据Chen、Tillberg与Boyden（2015）的口语改写，非摘要原文；描述作者研究，非你的实验结果。",
+        "id": "hihomo-full",
+        "title": "hiHomoExM · 背景与主要思路",
+        "en": "This paper asks a simple question: can we make a sample much larger without changing its shape? Expansion microscopy helps us see small structures by physically expanding a sample. However, a large expansion factor alone does not tell us whether the expansion is uniform. The researchers developed a method called high-fold homogeneous expansion microscopy. They reported about eight- to nine-fold expansion in a single round and tested structural preservation in centrioles and nuclear pore complexes. The method also supports labeling after expansion. The main point is to check both how much a sample expands and how well its structure is preserved.",
+        "zh": "这篇论文提出一个简单的问题：我们能否把样本放大很多，同时不改变它的形状？膨胀显微术通过物理膨胀样本，帮助我们看清微小结构。但是，仅凭膨胀倍数很大，并不能判断膨胀是否均匀。研究者开发了一种称为高倍均匀膨胀显微术的方法。他们报告，这种方法能在单轮中实现约8–9倍膨胀，并在中心粒和核孔复合物中检验了结构保留情况。该方法也支持膨胀后标记。核心要点是：既要检查样本膨胀了多少，也要检查它的结构保留得怎样。",
+        "audio": "hihomo-full.m4a",
+        "note": "依据Yang等（2026）摘要与引言整理的口语改写，不是摘要原文；描述作者研究，不是你的实验结果。",
         "keywords": [
-          "introduce ExM",
-          "polymer network",
-          "anchor labels",
-          "digestion and water",
-          "effective resolution"
+          "研究问题",
+          "膨胀不等于均匀",
+          "单轮8–9倍",
+          "结构保留验证",
+          "膨胀后标记"
         ],
         "source": {
-          "title": "Chen, Tillberg & Boyden · Science (2015)",
-          "doi": "10.1126/science.1260088",
-          "url": "https://doi.org/10.1126/science.1260088",
-          "fullText": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312537/",
-          "checked": "2026-10-15"
+          "title": "Yang等 · ACS Nano (2026) · High-fold Homogeneous Expansion Microscopy Reveals Ultrastructural Centrioles",
+          "doi": "10.1021/acsnano.6c05501",
+          "url": "https://doi.org/10.1021/acsnano.6c05501",
+          "fullText": "https://pubs.acs.org/doi/10.1021/acsnano.6c05501",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "checked": "2026-10-16"
         },
-        "scienceNotes": "这里概述2015年原版ExM：特制标记锚定、成胶、消化后在水中膨胀。约70 nm是该论文成像与膨胀条件下的有效横向分辨率，不是所有ExM样本的保证，也不是显微镜自身的光学分辨率发生改变。",
+        "scienceNotes": "本段只取原文摘要与引言的背景和主要思路。8–9倍是作者报告的单轮膨胀；结构保留须结合原文验证，不等于所有样本都完全无形变。原文约2 nm的表述涉及与dSTORM结合的条件，不能当作普通单轮膨胀的分辨率。原文为CC BY 4.0，本段为明确标注的口语改写。",
         "chunks": [
           {
-            "id": "weekend-1",
+            "id": "hihomo-1",
             "category": "周六 · 前半段",
-            "en": "In this paper, the researchers introduce a method called expansion microscopy. The main idea is to expand the sample before imaging it. They build a polymer network inside fixed samples and anchor specially designed fluorescent labels to it. After digestion, the gel takes up water, expands, and moves the labels farther apart.",
-            "zh": "这篇论文介绍了一种叫作膨胀显微术的方法。核心思路是在成像前将样本膨胀。研究者在固定样本内部建立聚合物网络，并将特制的荧光标记锚定到网络上。消化后，凝胶吸水膨胀，将这些标记拉得更远。",
-            "audio": "weekend-1.m4a"
+            "en": "This paper asks a simple question: can we make a sample much larger without changing its shape? Expansion microscopy helps us see small structures by physically expanding a sample. However, a large expansion factor alone does not tell us whether the expansion is uniform.",
+            "zh": "这篇论文提出一个简单的问题：我们能否把样本放大很多，同时不改变它的形状？膨胀显微术通过物理膨胀样本，帮助我们看清微小结构。但是，仅凭膨胀倍数很大，并不能判断膨胀是否均匀。",
+            "audio": "hihomo-1.m4a"
           },
           {
-            "id": "weekend-2",
+            "id": "hihomo-2",
             "category": "周日 · 后半段",
-            "en": "This allows us to see details that are normally too close together. The researchers demonstrated the method in cultured cells and mouse brain tissue. They reported an effective lateral resolution of about seventy nanometres under their imaging conditions. The key point is that they improved effective resolution by expanding the sample, rather than upgrading the microscope itself.",
-            "zh": "这样就能看清那些通常因距离太近而难以分辨的细节。研究者在培养细胞和小鼠脑组织中展示了该方法。在他们的成像条件下，报道的有效横向分辨率约为70纳米。关键在于：他们通过膨胀样本来提高有效分辨率，而不是升级显微镜本身。",
-            "audio": "weekend-2.m4a"
+            "en": "The researchers developed a method called high-fold homogeneous expansion microscopy. They reported about eight- to nine-fold expansion in a single round and tested structural preservation in centrioles and nuclear pore complexes. The method also supports labeling after expansion. The main point is to check both how much a sample expands and how well its structure is preserved.",
+            "zh": "研究者开发了一种称为高倍均匀膨胀显微术的方法。他们报告，这种方法能在单轮中实现约8–9倍膨胀，并在中心粒和核孔复合物中检验了结构保留情况。该方法也支持膨胀后标记。核心要点是：既要检查样本膨胀了多少，也要检查它的结构保留得怎样。",
+            "audio": "hihomo-2.m4a"
           }
         ]
       }
