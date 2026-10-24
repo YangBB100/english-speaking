@@ -1,5 +1,5 @@
 // Single working source for practice text, explanations, dates and generated audio.
-export const course = {
+const previousCourse = {
   "id": "english-chinese-first-2026-10-16",
   "title": "Two sentences",
   "week": "2026.10.15 — 10.18",
@@ -322,8 +322,83 @@ export const course = {
   ]
 };
 
+// New material starts on 24 October; previous lessons remain available in the archive.
+function day(date, research, everyday) {
+  const label = new Intl.DateTimeFormat('zh-CN', { weekday: 'short', timeZone: 'Asia/Hong_Kong' }).format(new Date(`${date}T12:00:00+08:00`));
+  return {
+    id: date, date, label, dateLabel: date.slice(5).replace('-', '.'), reviewIds: [],
+    items: [research, everyday].map(([en, zh, phrase, explanation], index) => ({
+      id: `${date}-${index === 0 ? 'research' : 'everyday'}`,
+      category: index === 0 ? '科研交流' : '日常交流',
+      en, zh, focus: [phrase], explanation,
+      audio: `${date}-${index === 0 ? 'research' : 'everyday'}.m4a`
+    }))
+  };
+}
+
+export const course = {
+  id: 'english-daily-2026-10-24', title: '每天两句',
+  week: '2026.10.24 — 11.06', startDate: '2026-10-24', endDate: '2026-11-06',
+  voice: previousCourse.voice, voiceLanguage: previousCourse.voiceLanguage,
+  voiceRate: previousCourse.voiceRate, maxReview: 0,
+  lessons: [
+    day('2026-10-24',
+      ['Could we go over this result together?', '我们能一起看一下这个结果吗？', 'go over', 'go over：一起仔细看看、讨论一下，适合向导师请教。'],
+      ['Do you have time for a quick coffee?', '你有空一起喝杯咖啡吗？', 'have time for', 'have time for …：有时间做某事；a quick coffee 是轻松、简短的邀约。']),
+    day('2026-10-25',
+      ["I'm still working on the analysis, so I don't have a clear answer yet.", '我还在做分析，所以目前还没有明确的答案。', 'working on', 'work on：正在做、处理；not … yet 表示目前还没有。'],
+      ["I'm running a little late, but I'll be there in ten minutes.", '我会稍微晚一点，不过十分钟后就到。', 'running a little late', 'run late：比原定时间晚；in ten minutes 是十分钟之后。']),
+    day('2026-10-26',
+      ['The signal is weaker than I expected.', '信号比我预想的弱。', 'than I expected', 'than I expected：比我原先预想的……；weaker 是 weak 的比较级。'],
+      ['It was quieter than I expected, so I stayed a little longer.', '那里比我预想的安静，所以我多待了一会儿。', 'than I expected', '复现同一个比较句架：quieter than I expected；用过去式描述已经发生的事。']),
+    day('2026-10-27',
+      ["I'm not sure whether this difference is caused by the staining.", '我不确定这个差异是不是染色造成的。', "I'm not sure whether", 'whether 引出“是否”；这句话表达待核实的原因。'],
+      ["I'm not sure whether this place is open on Sundays.", '我不确定这个地方周日开不开门。', "I'm not sure whether", '同一个句架可以用来问营业时间；on Sundays 表示每逢周日。']),
+    day('2026-10-28',
+      ['Could you explain what this part of the figure means?', '你能解释一下图里的这一部分是什么意思吗？', 'Could you explain', 'what this part … means 用陈述语序，不用 what does this part mean。'],
+      ['Could you tell me where I should get off?', '你能告诉我应该在哪一站下车吗？', 'Could you tell me', 'where I should get off 同样用陈述语序；get off 表示下车。']),
+    day('2026-10-29',
+      ["I'll check the original data before drawing a conclusion.", '我会先检查原始数据，再下结论。', 'before drawing a conclusion', 'before 后接动词时可用 -ing；draw a conclusion 是“得出结论”。'],
+      ["I'll check my calendar and get back to you this afternoon.", '我看一下日程，今天下午再回复你。', 'get back to you', 'get back to you：之后再回复你；复现之前学过的表达。']),
+    day('2026-10-30',
+      ['The next step is to repeat the experiment under the same conditions.', '下一步是在相同条件下重复这个实验。', 'The next step is to', 'The next step is to + 动词原形，用一句话交代下一步。'],
+      ['Would you like to grab something to eat after work?', '下班后要不要一起吃点东西？', 'grab something to eat', 'grab something to eat 是口语里轻松的“吃点东西”。']),
+    day('2026-10-31',
+      ['Could we go over the plan before I start the experiment?', '我开始实验前，我们能一起过一遍计划吗？', 'go over', '复现 go over：这次把讨论对象从 result 换成 plan。'],
+      ['Do you have time to help me with something?', '你有空帮我个忙吗？', 'have time to', 'have time to + 动词；与 have time for + 名词搭配区分。']),
+    day('2026-11-01',
+      ["I've finished preparing the samples, but I haven't imaged them yet.", '我已经准备好样本了，但还没有给它们成像。', "I haven't imaged them yet", 'have finished / have not … yet：已经完成一部分，另一部分还没做。'],
+      ["I've been meaning to try this restaurant for a while.", '我想试试这家餐厅已经有一阵子了。', "I've been meaning to", 'I have been meaning to …：一直有这个打算，但还没做。']),
+    day('2026-11-02',
+      ['This method seems promising, but we need more evidence.', '这个方法看起来有前景，不过我们还需要更多证据。', 'seems promising', 'seems 保留判断余地；promising 表示有前景、有希望。'],
+      ["That sounds good, but I'd prefer somewhere closer.", '听起来不错，不过我更想选个近一点的地方。', "I'd prefer", 'I would prefer …：我会更倾向于……，适合温和地表达偏好。']),
+    day('2026-11-03',
+      ['We need to check whether the imaging settings were the same.', '我们需要检查一下，当时的成像设置是不是相同。', 'check whether', '复现 check whether；were 指之前采集图像时的设置。'],
+      ['Let me check whether I left my umbrella in the office.', '我确认一下是不是把伞落在办公室了。', 'check whether', '同一个“确认是否”句架；left 是 leave 的过去式。']),
+    day('2026-11-04',
+      ['Would it help to compare these samples side by side?', '把这些样本放在一起比较，会有帮助吗？', 'Would it help to', 'Would it help to …? 用来提出一个可能有用的做法；side by side 是并排比较。'],
+      ['Would it be okay if we met half an hour later?', '我们晚半小时见面可以吗？', 'Would it be okay if', '礼貌提出调整；这里 met 的过去式用于委婉假设。']),
+    day('2026-11-05',
+      ['As far as I understand, the two methods use different labeling strategies.', '据我理解，这两种方法使用了不同的标记策略。', 'As far as I understand', 'As far as I understand：据我目前的理解；给自己的判断保留边界。'],
+      ['As far as I know, the last bus leaves at midnight.', '据我所知，末班车在午夜发车。', 'As far as I know', 'As far as I know：据我所知。实际使用时换成已确认的班次时间。']),
+    day('2026-11-06',
+      ["I'd like to focus on one question at a time.", '我想一次集中解决一个问题。', 'one question at a time', 'one … at a time：一次一个……；focus on 表示专注于。'],
+      ["I haven't decided yet, but I'm leaning towards staying in.", '我还没决定，不过更倾向于待在家里。', "I'm leaning towards", 'lean towards + 名词或 -ing：更倾向于；stay in 表示待在家里。'])
+  ],
+  archive: previousCourse.lessons
+};
+
+export function hongKongDate(now = new Date()) {
+  const parts = new Intl.DateTimeFormat('en', { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(now);
+  return ['year', 'month', 'day'].map(type => parts.find(part => part.type === type).value).join('-');
+}
+
+export function lessonForDate(date) {
+  return course.lessons.find(lesson => lesson.date === date) || (date < course.startDate ? course.lessons[0] : course.lessons.at(-1));
+}
+
 export function audioItems() {
-  return course.lessons.flatMap(lesson => lesson.paragraph
+  return [...course.lessons, ...course.archive].flatMap(lesson => lesson.paragraph
     ? [lesson.paragraph, ...lesson.paragraph.chunks]
     : lesson.items);
 }
