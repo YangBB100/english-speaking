@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f5f0">
-  <meta name="description" content="每天一句科研、一个日常场景。看中文开口说，点击展开英文，听发音参考。">
+  <meta name="description" content="每天3句日常、3句科研，按主题练习。看中文开口说，点击展开英文，听发音参考。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>每天两句 · 英语口语</title>
+  <title>每天六句 · 英语口语</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=daily-20261024">
-  <script type="module" src="./app.mjs?v=daily-20261024"></script>
+  <link rel="stylesheet" href="./style.css?v=six-20261025">
+  <script type="module" src="./app.mjs?v=six-20261025"></script>
 </head>
 <body>
   <a class="skip" href="#lesson-content">跳到句子</a>
   <main>
-    <header class="page-header"><h1>每天两句<span>英语口语</span></h1><button id="today" type="button">今天</button></header>
+    <header class="page-header"><h1>每天六句<span>英语口语</span></h1><button id="today" type="button">今天</button></header>
     <nav class="date-nav" aria-label="选择练习日期">
       <button id="previous" class="arrow" type="button" aria-label="前一天">←</button>
       <label class="date-select"><span class="sr-only">练习日期</span><select id="lesson-date" aria-label="练习日期"></select></label>
@@ -30,7 +30,8 @@
       <p id="audio-status" role="status" aria-live="polite"></p>
     </section>
     <footer>
-      <p>每天一句科研，一句日常。按真实情况使用，意思说清楚就好。</p>
+      <p>每天3句日常＋3句科研。先看中文说，再听、再核对；情境例句请按真实情况使用。忙时少背几句，不补双倍。</p>
+      <details class="archive themes"><summary>按主题找句子</summary><div id="theme-links"></div></details>
       <details class="archive"><summary>以前的内容</summary><div id="archive-links"></div></details>
       <small>发音参考 · Ava Enhanced 美式合成语音</small>
     </footer>

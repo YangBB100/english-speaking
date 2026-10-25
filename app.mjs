@@ -1,4 +1,4 @@
-import { course, audioItems, hongKongDate, lessonForDate } from './lessons.mjs?v=daily-20261024';
+import { course, audioItems, hongKongDate, lessonForDate } from './lessons.mjs?v=six-20261025';
 
 const $ = selector => document.querySelector(selector);
 const audio = $('#audio');
@@ -14,7 +14,7 @@ let followToday = true;
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 }
-function title(item) { return item.category || '以前的短文'; }
+function title(item) { return item.theme ? `${item.category} · ${item.theme}` : item.category || '以前的短文'; }
 function audioUrl(item) { return `./audio/${item.audio}?v=${encodeURIComponent(course.id)}`; }
 function sentence(item, index, passage = false) {
   let english = escapeHtml(item.en);
@@ -52,6 +52,8 @@ function render(lesson, isArchive = false) {
     if (lesson.paragraph) {
       const p = lesson.paragraph;
       $('#lesson-content').innerHTML = `<h2 class="archive-title">${escapeHtml(lesson.title)}</h2>${sentence(p, 0, true)}${p.chunks.map((part, i) => sentence(part, i + 1, true)).join('')}<p class="source-note">${escapeHtml(p.note)} <a href="${escapeHtml(p.source.url)}" target="_blank" rel="noopener noreferrer">论文出处</a> · <a href="${escapeHtml(p.source.licenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.source.license)}</a></p>`;
+    } else if(lesson.items.length===6) {
+      $('#lesson-content').innerHTML = ['日常交流','科研交流'].map((category,lane)=>`<section class="daily-group"><h2>${category} · ${escapeHtml(lesson.items.find(item=>item.category===category).theme)}<span>3句</span></h2>${lesson.items.filter(item=>item.category===category).map((item,i)=>sentence(item,lane*3+i)).join('')}</section>`).join('');
     } else $('#lesson-content').innerHTML = lesson.items.map((item, i) => sentence(item, i)).join('');
   }
   const index = course.lessons.findIndex(item => item.id === lesson.id);
@@ -61,7 +63,7 @@ function render(lesson, isArchive = false) {
   $('#today').textContent = followToday && !isArchive ? '今天' : '回到今天';
   const outOfRange = followToday && hongKongDate() > course.endDate;
   $('#schedule-note').hidden = !outOfRange && !isArchive;
-  $('#schedule-note').textContent = isArchive ? '以前的内容 · 可随时回看' : outOfRange ? '这一轮已排到11月6日，可以先回看之前的句子。' : '';
+  $('#schedule-note').textContent = isArchive ? '以前的内容 · 可随时回看' : outOfRange ? `这一轮已排到${Number(course.endDate.slice(5,7))}月${Number(course.endDate.slice(8))}日，可以先回看之前的句子。` : '';
 }
 function navigate(route) {
   const archive = route.startsWith('archive-') && course.archive.find(lesson => `archive-${lesson.id}` === route);
@@ -87,12 +89,19 @@ async function playItem(id) {
   audio.setAttribute('aria-label', label);
   $('#player').hidden = false;
   $('#audio-status').textContent = '';
-  if ('mediaSession' in navigator && 'MediaMetadata' in window) navigator.mediaSession.metadata = new MediaMetadata({ title: label, artist: 'Ava Enhanced', album: '每天两句' });
+  if ('mediaSession' in navigator && 'MediaMetadata' in window) navigator.mediaSession.metadata = new MediaMetadata({ title: label, artist: 'Ava Enhanced', album: course.title });
   try { await audio.play(); if (request === requestId) updatePlayButtons(); }
   catch (error) { if (request === requestId && error.name !== 'AbortError') $('#audio-status').textContent = '请再点一次，或使用下方播放键。'; }
 }
-$('#lesson-date').innerHTML = `<optgroup label="每天两句">${course.lessons.map(lesson => `<option value="${lesson.id}">${lesson.dateLabel} · ${lesson.label}</option>`).join('')}</optgroup><optgroup label="以前的内容">${course.archive.map(lesson => `<option value="archive-${lesson.id}">${lesson.dateLabel} · ${lesson.paragraph ? 'hiHomo短文' : '旧句子'}</option>`).join('')}</optgroup>`;
+$('#lesson-date').innerHTML = `<optgroup label="每天六句">${course.lessons.map(lesson => `<option value="${lesson.id}">${lesson.dateLabel} · ${lesson.label}</option>`).join('')}</optgroup><optgroup label="以前的内容">${course.archive.map(lesson => `<option value="archive-${lesson.id}">${lesson.dateLabel} · ${lesson.paragraph ? 'hiHomo短文' : '旧句子'}</option>`).join('')}</optgroup>`;
+$('#theme-links').innerHTML = course.lessons.map(lesson=>`<a href="#${lesson.id}"><span>${lesson.dateLabel}</span><span>${escapeHtml(lesson.items[0].theme)}<br>${escapeHtml(lesson.items[3].theme)}</span></a>`).join('');
 $('#archive-links').innerHTML = course.archive.map(lesson => `<a href="#archive-${lesson.id}">${lesson.dateLabel} · ${escapeHtml(lesson.title)}</a>`).join('');
+$('#theme-links').addEventListener('click',event=>{
+  const link=event.target.closest('a');if(!link)return;
+  event.preventDefault();navigate(link.hash.slice(1));
+  $('#lesson-content').scrollIntoView({block:'start'});
+  $('#lesson-content').focus({preventScroll:true});
+});
 $('#today').addEventListener('click', () => navigate('today'));
 $('.skip').addEventListener('click', event => { event.preventDefault(); $('#lesson-content').focus(); });
 $('#lesson-date').addEventListener('change', event => navigate(event.target.value));
